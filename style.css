@@ -47,6 +47,10 @@ header {
     height: 165px;
 }
 
+header button {
+    display: none;
+}
+
 header img {
     width: 234px;
 }
@@ -456,3 +460,55 @@ footer .container-grid {
 /* OK - Scroll nos links */
 /* OK - Favicon */
 /* Animação do banner */
+
+@media screen and (max-width: 1300px) {
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        display: unset;
+
+        background: none;
+        border: none;
+    }
+
+    header svg {
+        fill: white;
+    }
+    
+    nav.menu {
+        height: 500px;
+        width: 350px;
+
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+
+        background-color: #000000da;
+
+        position: absolute;
+        top: 165px;
+        right: 0px;
+    }
+
+    #sobre {
+        padding: 100px 15%;
+    }
+
+    .card {
+        height: 320px;
+        width: 200px;
+    }
+
+    #contato form {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    
+}
