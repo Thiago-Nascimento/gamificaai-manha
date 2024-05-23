@@ -37,10 +37,46 @@ html {
     /* vw é a porcentagem da LARGURA da tela */
     height: 100vh;
 
-    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
     background-repeat: no-repeat;
 
     background-position: 165% 40%;
+
+    position: relative;
+}
+
+.primeiro-banner {
+    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
+}
+
+.segundo-banner {
+    background-image: linear-gradient(90deg, rgba(24, 104, 36, 1) 0%, rgba(24, 104, 36, 0.8) 100%), url(img/bg-room.png);
+}
+
+.terceiro-banner {
+    background-image: linear-gradient(90deg, rgba(104, 24, 48, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
+}
+
+#botao-voltar, #botao-proximo {
+    width: 30px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    position: absolute;
+}
+
+#botao-voltar svg, #botao-proximo svg {
+    fill: #ffffff76;
+}
+
+#botao-voltar {
+    left: 4%;
+}
+
+#botao-proximo {
+    right: 4%;
 }
 
 header {
@@ -49,6 +85,7 @@ header {
 
 header button {
     display: none;
+    cursor: pointer;
 }
 
 header img {
@@ -460,6 +497,14 @@ footer .container-grid {
 /* OK - Scroll nos links */
 /* OK - Favicon */
 /* Animação do banner */
+
+.menu-fechado {
+    display: none;
+}
+
+#icone-barras {
+    display: none;
+}
 
 @media screen and (max-width: 1300px) {
     header {
