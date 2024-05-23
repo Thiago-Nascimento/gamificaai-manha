@@ -79,6 +79,36 @@ html {
     right: 4%;
 }
 
+.botoes {
+    width: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 4%;
+
+    /* Centralizar usando position */
+    /* Adicionar left 50% */
+    /* Usar função calc() para subtrair metade da largura do elemento Ex.: 75px */
+    left: calc(50% - 75px);    
+}
+
+.botoes button {
+    width: 30px;
+
+    display: unset;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botoes button svg {
+    fill: #ffffff76;
+}
+
 header {
     height: 165px;
 }

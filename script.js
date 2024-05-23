@@ -33,6 +33,12 @@ function abreFechaMenu() {
     }
 }
 
+// if (window.innerWidth < 1300) {
+//     menu.classList.add("menu-fechado")
+//     iconeBarras.style.display = "inline"
+//     iconeX.style.display = "none"
+// }
+
 onresize = () => {
     // Abrir o menu - remover a classe menu-fechado
     menu.classList.remove("menu-fechado")
@@ -53,9 +59,9 @@ let banner = document.querySelector(".banner")
 // slides[2] -> terceiro-banner
 
 let slides = [
-    "primeiro-banner",
-    "segundo-banner",
-    "terceiro-banner"
+    "primeiro-banner", // 0
+    "segundo-banner",  // 1
+    "terceiro-banner"  // 2
 ]
 
 let slideAtual = 0
@@ -66,9 +72,41 @@ function mostrarProximoSlide() {
     // Remover o slide anterior
     banner.classList.remove(slides[slideAtual])
 
-    // Somar 1 na variavel slideAtual
-    slideAtual++
+    if (slideAtual < 2) {
+        // Somar 1 na variavel slideAtual
+        slideAtual++        
+    } else {
+        // Voltar para o primeiro banner
+        slideAtual = 0
+    }
 
     // Mostrar slide de acordo com o slide atual
+    banner.classList.add(slides[slideAtual])
+}
+
+function mostrarSlideAnterior() {
+    // Remover o slide anterior
+    banner.classList.remove(slides[slideAtual])
+
+    if (slideAtual > 0) {
+        // Subtrair 1 na variavel slideAtual
+        slideAtual--
+    } else {
+        // Voltar para o ultimo slide
+        slideAtual = 2
+    }
+
+    // Mostrar slide de acordo com o slide atual
+    banner.classList.add(slides[slideAtual])
+}
+
+function selecionarSlide(indiceSlide) {
+    // Remove o slide atual
+    banner.classList.remove(slides[slideAtual])
+    
+    // Atualiza a variavel com o indice de slide selecionado
+    slideAtual = indiceSlide
+
+    // Mostra o slide selecionado e salvo na variavel slideAtual
     banner.classList.add(slides[slideAtual])
 }
