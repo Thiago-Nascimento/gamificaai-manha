@@ -16,7 +16,7 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="carregarCases()">
     <div class="banner">
         <header>
             <div class="container-grid">
@@ -87,7 +87,7 @@
     <section id="contato">
         <h2>Contate-nos</h2>
 
-        <form>
+        <form onsubmit="solicitarOrcamento(event)">
             <div class="campo">
                 <label for="campo-nome">Qual é o seu nome?</label>
                 <input id="campo-nome" placeholder="Digite o seu nome..." type="text">
